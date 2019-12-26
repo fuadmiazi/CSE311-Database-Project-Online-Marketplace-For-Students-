@@ -6,13 +6,13 @@
         table{
             border-collapse: collapse;
             width: 100%;
-            color: #d96459;
+            color: black;
             font-family: monospace;
             font-size: 25px;
             text-align: left;
         }
         th{
-            background-color: #d96459;
+            background-color: black;
             color: white;
         }
         tr:nth-child(even) {background-color: #f2f2f2}
@@ -26,7 +26,7 @@
             <div class="item menu2"> <a id="linked" href="http://localhost/courses.php">Courses</a> </div>
             <div class="item menu3"><a id="linked" href="">Instructors</a> </div>
             <div class="item menu4"><a id="linked" href="">About</a></div>
-            <div class="item menu5"><a id="linked" href="">Cart</a> </div>
+            <div class="item menu5"><a id="linked" href="http://localhost/cart.php">Cart</a> </div>
             <div class="item menu5"><a id="linked" href="http://localhost/login.php">Log Out</a> </div>
         </div> 
     </div>
@@ -49,7 +49,12 @@
         <form class="form" action="seemore.php" method="POST">
         Please Input The ID Number Of The Course To Add In Cart : 
         <input type="text" name="number" value="Ex: 1">
-        <button type="submit" name="sub">Submit</button>
+        <button type="submit" onclick="myFunction()" name="sub">Submit</button>
+        <script>
+            function myFunction() {
+            alert("Item Added to Cart Successfully!");
+            }
+        </script>
         <div class="alert alert-error"><? $_SESSION['message'] ?></div>
         <br>
         <br>

@@ -127,7 +127,7 @@ if($result-> num_rows > 0){
             <div class="item menu2"> <a id="linked" href="">Courses</a> </div>
             <div class="item menu3"><a id="linked" href="">Instructors</a> </div>
             <div class="item menu4"><a id="linked" href="">About</a></div>
-            <div class="item menu5"><a id="linked" href="">Cart</a> </div>
+            <div class="item menu5"><a id="linked" href="http://localhost/cart.php">Cart</a> </div>
             <div class="item menu5"><a id="linked" href="http://localhost/login.php">Log Out</a> </div>
         </div> 
 
