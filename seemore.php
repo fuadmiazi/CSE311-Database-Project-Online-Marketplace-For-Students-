@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,47 +55,20 @@
         <br>
         </form>
     </div>
-
+    </body>
+        </html>
             <?php
-            $conn = mysqli_connect("localhost", "root", "", "courses");
-            $conn2 = mysqli_connect("localhost", "root", "", "cart");
+
+            $host = "localhost";
+            $user = "root";
+            $password = "";
+            $dbname = "courses";
+
+            $conn = mysqli_connect($host, $user, $password, $dbname);
             if($conn-> connect_error){
                 die("Connection Failed:". $conn-> connect_error);
             }
-            if($conn2-> connect_error){
-                die("Connection Failed:". $conn2-> connect_error);
-            }
-
-            if(isset($_POST['sub'])) {
-                $number = $_POST['number'];
-                $sql = "SELECT course_id, course_name, instructor_name, duration, fee from programming WHERE course_id=$number";
-            $result = $conn-> query($sql);
-
-            if($result == true){
-                while ($row = $result-> fetch_assoc()) {
-                    $course_name = $row['course_name'];
-                    $instructor_name = $row['instructor_name'];
-                    $duration = $row['duration'];
-                    $fee = $row['fee'];
-
-                    
-                }
-                $sql2 = "INSERT INTO orders(course_name, instructor_name, duration, fee) VALUES('$course_name', '$instructor_name', '$duration, '$fee'";
-                    if($conn2->query($sql2) === TRUE) {
-                        $_SESSION['message']= "Registration successfull!";
-                        header('location: cart.php/?error=false');
-                      }
-                      else {
-                          $_SESSION['message']="Registration failed!";
-                          header('location: seemore.php/?error=true');
-                      }
-                
-            }
-            
-            }
-
-            
-
+               
             $sql = "SELECT course_id, course_name, instructor_name, duration, fee from programming";
             $result = $conn-> query($sql);
 
@@ -111,8 +82,18 @@
                 echo "0 result";
             }
 
+            if(isset($_POST['sub'])){
+                $number = $_POST['number'];
+                $sql = "INSERT INTO orders (course_name, instructor_name, duration, fee) SELECT course_name, instructor_name, duration, fee FROM programming WHERE course_id=$number";
+                if($conn-> query($sql)==TRUE){
+                    $_SESSION['message'] = "Added To Cart"; 
+                }
+                else{
+                    $_SESSION['message'] = "Item Add Failed!";
+                }
+            }
+
             $conn-> close();
             ?>
 
-        </body>
-        </html>
+        

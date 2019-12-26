@@ -60,6 +60,58 @@ if($result-> num_rows > 0){
 }
 
 
+$sql = "SELECT course_name, instructor_name, duration, fee FROM graphics WHERE course_id=1";
+$result = $conn-> query($sql);
+
+if($result-> num_rows > 0){
+    while ($row = $result-> fetch_assoc()) {
+        $course_name5 = $row['course_name'];
+        $instructor_name5 = $row['instructor_name'];
+        $duration5 = $row['duration'];
+        $fee5 = $row['fee'];
+    }
+}
+
+
+$sql = "SELECT course_name, instructor_name, duration, fee FROM graphics WHERE course_id=2";
+$result = $conn-> query($sql);
+
+if($result-> num_rows > 0){
+    while ($row = $result-> fetch_assoc()) {
+        $course_name6 = $row['course_name'];
+        $instructor_name6 = $row['instructor_name'];
+        $duration6 = $row['duration'];
+        $fee6 = $row['fee'];
+    }
+}
+
+
+$sql = "SELECT course_name, instructor_name, duration, fee FROM graphics WHERE course_id=3";
+$result = $conn-> query($sql);
+
+if($result-> num_rows > 0){
+    while ($row = $result-> fetch_assoc()) {
+        $course_name7 = $row['course_name'];
+        $instructor_name7 = $row['instructor_name'];
+        $duration7 = $row['duration'];
+        $fee7 = $row['fee'];
+    }
+}
+
+
+$sql = "SELECT course_name, instructor_name, duration, fee FROM graphics WHERE course_id=4";
+$result = $conn-> query($sql);
+
+if($result-> num_rows > 0){
+    while ($row = $result-> fetch_assoc()) {
+        $course_name8 = $row['course_name'];
+        $instructor_name8 = $row['instructor_name'];
+        $duration8 = $row['duration'];
+        $fee8 = $row['fee'];
+    }
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -132,32 +184,32 @@ if($result-> num_rows > 0){
     <div class="courses_container">
     
             <div class="courses">
-                <div class="course_name">Course : Design Typography T-shirts!</div>
-                <div class="course_instructor">Instructor:  Jaysen Batchelor</div>
-                <div class="course_duration">Duration: 1 month</div>
-                <div class="course_fee">Fee: BDT900</div>
+                <div class="course_name">Course : <?php echo $course_name5 ?></div>
+                <div class="course_instructor">Instructor:  <?php echo $instructor_name5 ?></div>
+                <div class="course_duration">Duration: <?php echo $duration5 ?></div>
+                <div class="course_fee">Fee: <?php echo $fee5 ?></div>
                 <input type="submit" value="Buy Now"   class="buy-button">
             </div>
 
             <div class="courses">
-                <div class="course_name">Course : Illustrator CC 2020 MasterClass</div>
-                <div class="course_instructor">Instructor: Martin Perhiniak</div>
-                <div class="course_duration">Duration: 2 months</div>
-                <div class="course_fee">Fee: BDT1500</div>
+                <div class="course_name">Course : <?php echo $course_name6 ?></div>
+                <div class="course_instructor">Instructor: <?php echo $instructor_name6 ?></div>
+                <div class="course_duration">Duration: <?php echo $duration6 ?></div>
+                <div class="course_fee">Fee: <?php echo $fee6 ?></div>
                 <input type="submit" value="Buy Now" class="buy-button">
             </div>
             <div class="courses">
-                <div class="course_name">Course : Adobe Photoshop CC – Essentials Training </div>
-                <div class="course_instructor">Instructor: Daniel Walter Scott</div>
-                <div class="course_duration">Duration: 3 months</div>
-                <div class="course_fee">Fee: BDT2500</div>
+                <div class="course_name">Course : <?php echo $course_name7 ?></div>
+                <div class="course_instructor">Instructor: <?php echo $instructor_name7 ?></div>
+                <div class="course_duration">Duration: <?php echo $duration7 ?></div>
+                <div class="course_fee">Fee: <?php echo $fee7 ?></div>
                 <input type="submit" value="Buy Now" class="buy-button">
             </div>
             <div class="courses">
-                <div class="course_name">Course : Graphic Design Masterclass</div>
-                <div class="course_instructor">Instructor: Lindsay Marsh</div>
-                <div class="course_duration">Duration: 15 Hours</div>
-                <div class="course_fee">Fee: BDT6500</div>
+                <div class="course_name">Course : <?php echo $course_name8 ?></div>
+                <div class="course_instructor">Instructor: <?php echo $instructor_name8 ?></div>
+                <div class="course_duration">Duration: <?php echo $duration8 ?></div>
+                <div class="course_fee">Fee: <?php echo $fee8 ?></div>
                 <input type="submit" value="Buy Now" class="buy-button">
             </div>
 </div>
