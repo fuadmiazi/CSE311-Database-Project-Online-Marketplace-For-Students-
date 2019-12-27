@@ -60,7 +60,7 @@ if(isset($_POST['username'])){
 	<div class="container">
 	<img src="http://localhost/login.JPG"/>
 		<h1> <?php echo "$msg"  ?> </h1>
-		<form method="POST" action="/Login.php">
+		<form method="POST" action="/index.php">
 			<div class="form-input">
 				<input type="text" name="username" placeholder="Enter the User Name"/>	
 			</div>

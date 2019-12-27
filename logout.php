@@ -71,7 +71,7 @@
     $sql="DELETE FROM orders";
     $result = $conn-> query($sql);
         if($result == TRUE){
-            header('location: login.php/?error=false');
+            header('location: index.php/?error=false');
         }
         else{
             header('location: logout.php/?error=true');
