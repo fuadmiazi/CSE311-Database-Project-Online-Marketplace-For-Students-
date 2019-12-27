@@ -42,12 +42,12 @@
             
     </div>
     </div>
-        <!--
-    <div class ="total-amount">
-        <h1>Total Amount: </h1> 
+    
+    
+    <!--<div class ="total-amount">
+        <h1>Total Amount: <?php echo $totalmoney ?> </h1> 
     </div>
     -->
-
 </body>
 </htmL>
 
@@ -76,15 +76,17 @@
                 echo "0 result";
             }
 
+            
+            
+           
             $sql ="SELECT SUM(fee) AS Total FROM orders";
             $result = $conn-> query($sql);
             if($result-> num_rows > 0){
                 while ($row = $result-> fetch_assoc()) {
                     $totalmoney = $row['Total'];
-                    echo $totalmoney;
+                    echo "Total Amount: ".$totalmoney;
                 }
             }
-            
             
 
 
