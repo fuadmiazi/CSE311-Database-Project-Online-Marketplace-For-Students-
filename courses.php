@@ -112,6 +112,7 @@ if($result-> num_rows > 0){
 }
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -148,7 +149,6 @@ if($result-> num_rows > 0){
                 <div class="course_instructor">Instructor: <?php echo $instructor_name ?></div>
                 <div class="course_duration">Duration: <?php echo $duration ?></div>
                 <div class="course_fee">Fee: <?php echo $fee ?></div>
-                <input type="submit"  name="submit" value="Buy Now" class="buy-button">
                 
             </div>
 
@@ -157,21 +157,20 @@ if($result-> num_rows > 0){
                 <div class="course_instructor">Instructor: <?php echo $instructor_name2 ?></div>
                 <div class="course_duration">Duration: <?php echo $duration2 ?></div>
                 <div class="course_fee">Fee: <?php echo $fee2 ?></div>
-                <input type="submit" value="Buy Now" class="buy-button">
             </div>
             <div class="courses">
                 <div class="course_name">Course : <?php echo $course_name3 ?></div>
                 <div class="course_instructor">Instructor: <?php echo $instructor_name3 ?></div>
                 <div class="course_duration">Duration: <?php echo $duration3 ?></div>
                 <div class="course_fee">Fee: <?php echo $fee3 ?></div>
-                <input type="submit" value="Buy Now" class="buy-button">
+                
             </div>
             <div class="courses">
                 <div class="course_name">Course : <?php echo $course_name4 ?></div>
                 <div class="course_instructor">Instructor: <?php echo $instructor_name4 ?></div>
                 <div class="course_duration">Duration: <?php echo $duration4 ?></div>
                 <div class="course_fee">Fee: <?php echo $fee4 ?></div>
-                <input type="submit" value="Buy Now" class="buy-button">
+                
             </div>
            
     </div>
@@ -188,7 +187,7 @@ if($result-> num_rows > 0){
                 <div class="course_instructor">Instructor:  <?php echo $instructor_name5 ?></div>
                 <div class="course_duration">Duration: <?php echo $duration5 ?></div>
                 <div class="course_fee">Fee: <?php echo $fee5 ?></div>
-                <input type="submit" value="Buy Now"   class="buy-button">
+                
             </div>
 
             <div class="courses">
@@ -196,25 +195,25 @@ if($result-> num_rows > 0){
                 <div class="course_instructor">Instructor: <?php echo $instructor_name6 ?></div>
                 <div class="course_duration">Duration: <?php echo $duration6 ?></div>
                 <div class="course_fee">Fee: <?php echo $fee6 ?></div>
-                <input type="submit" value="Buy Now" class="buy-button">
+                
             </div>
             <div class="courses">
                 <div class="course_name">Course : <?php echo $course_name7 ?></div>
                 <div class="course_instructor">Instructor: <?php echo $instructor_name7 ?></div>
                 <div class="course_duration">Duration: <?php echo $duration7 ?></div>
                 <div class="course_fee">Fee: <?php echo $fee7 ?></div>
-                <input type="submit" value="Buy Now" class="buy-button">
+                
             </div>
             <div class="courses">
                 <div class="course_name">Course : <?php echo $course_name8 ?></div>
                 <div class="course_instructor">Instructor: <?php echo $instructor_name8 ?></div>
                 <div class="course_duration">Duration: <?php echo $duration8 ?></div>
                 <div class="course_fee">Fee: <?php echo $fee8 ?></div>
-                <input type="submit" value="Buy Now" class="buy-button">
+                
             </div>
 </div>
 
-            <div class="see_more"><a href="http://localhost/seemore.php">See More >></a></div>
+            <div class="see_more"><a href="http://localhost/seemoregraphics.php">See More >></a></div>
 
 
     	

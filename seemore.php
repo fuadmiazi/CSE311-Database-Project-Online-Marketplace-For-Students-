@@ -9,7 +9,7 @@
             color: black;
             font-family: monospace;
             font-size: 25px;
-            text-align: left;
+            text-align: center;
         }
         th{
             background-color: black;
