@@ -27,7 +27,7 @@
             <div class="item menu3"><a id="linked" href="">Instructors</a> </div>
             <div class="item menu4"><a id="linked" href="">About</a></div>
             <div class="item menu5"><a id="linked" href="http://localhost/cart.php">Cart</a> </div>
-            <div class="item menu5"><a id="linked" href="http://localhost/login.php">Log Out</a> </div>
+            <div class="item menu5"><a id="linked" href="http://localhost/logout.php">Log Out</a> </div>
         </div> 
     </div>
 
@@ -48,7 +48,7 @@
         <br>
         <form class="form" action="seemoregraphics.php" method="POST">
         Please Input The ID Number Of The Course To Add In Cart : 
-        <input type="text" name="number" value="Ex: 1">
+        <input type="text" name="number">
         <button type="submit" onclick="myFunction()" name="sub">Submit</button>
         <script>
             function myFunction() {
