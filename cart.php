@@ -17,6 +17,9 @@
             color: white;
         }
         tr:nth-child(even) {background-color: #f2f2f2}
+        .total-amount{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -26,7 +29,7 @@
             <div class="item menu1"> <a id="linked" href="http://localhost/homesi.php"> Home</a></div>
             <div class="item menu2"> <a id="linked" href="http://localhost/courses.php">Courses</a> </div>
             <div class="item menu3"><a id="linked" href="">Instructors</a> </div>
-            <div class="item menu4"><a id="linked" href="">About</a></div>
+            <div class="item menu4"><a id="linked" href="http://localhost/about.php">About</a></div>
             <div class="item menu5"><a id="linked" href="">Cart</a> </div>
             <div class="item menu5"><a id="linked" href="http://localhost/logout.php">Log Out</a> </div>
         </div> 
@@ -44,14 +47,9 @@
     </div>
     
     
-    <!--<div class ="total-amount">
-        <h1>Total Amount: <?php echo $totalmoney ?> </h1> 
-    </div>
-    -->
-</body>
-</htmL>
+    
 
-<?php
+    <?php
 
             $host = "localhost";
             $user = "root";
@@ -84,7 +82,7 @@
             if($result-> num_rows > 0){
                 while ($row = $result-> fetch_assoc()) {
                     $totalmoney = $row['Total'];
-                    echo "Total Amount: ".$totalmoney;
+                    //echo "Total Amount: ".$totalmoney;
                 }
             }
             
@@ -93,3 +91,11 @@
 
             $conn-> close();
 ?>
+
+<div class ="total-amount">
+        <h1>Total Amount: <?php echo $totalmoney ?> </h1> 
+    </div>
+
+</body>
+</htmL>
+

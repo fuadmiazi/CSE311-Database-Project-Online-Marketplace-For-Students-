@@ -34,7 +34,7 @@ if (isset($_POST['register'])) {
           
   	if($conn->query($sql) === TRUE) {
         $_SESSION['message']= "Registration successfull!";
-        header('location: login.php/?error=false');
+        header('location: index.php/?error=false');
       }
       else {
           $_SESSION['message']="Registration failed!";
@@ -49,10 +49,19 @@ if (isset($_POST['register'])) {
 <head>
     <title>Registration Form</title>
     <link rel="stylesheet" type="text/css" href="http://localhost/styleregi.css">
+    <style type="text/css">
+      .login{
+          text-align: center;
+          background-color: #00aeff;
+          font-size: 1.5em;
+          margin-top: 15px;
+  }
+    
+    </style>
 
 <body>
-<link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="style2/css"/>
-<link rel="stylesheet" href="form.css" type="style2/css">
+<!--<link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="style2/css"/>
+<link rel="stylesheet" href="form.css" type="style2/css">-->
 <div class="body-content">
   <div class="module">
     <h1>Create an account</h1>
@@ -65,6 +74,7 @@ if (isset($_POST['register'])) {
       <input type="password" placeholder="Confirm Password" name="confirmpassword" autocomplete="new-password" required />
       <!-- <div class="avatar"><label>Select your avatar: </label><input type="file" name="avatar" accept="image/*" required /></div> -->
       <input type="submit" value="Register" name="register" class="btn btn-block btn-primary" />
+      <div class="login"> <a id="linked" href="http://localhost/index.php"> Already have an account? </a> </div>
     </form>
   </div>
 </div>

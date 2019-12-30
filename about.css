@@ -1,0 +1,53 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-container{
+  width: 100%;
+}
+.flex-container{
+    width: 100%;
+    display:flex;
+    background-color:skyblue;
+   
+}
+.item{
+    min-width: 200px;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+    text-align: center;
+}
+.item:hover{
+    background-color: white;
+    color: black;
+}
+.group-members{
+    width: 100%;
+    display: flex;
+    margin-left: 330px;
+    margin-top: 50px;
+}
+.headline{
+    font-size: 2em;
+    font-style: italic;
+    font-weight: bold;
+    color: crimson;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+#image{
+    width: 250px;
+    height: 250px;
+    margin-right: 40px;
+}
+.name{
+    font-size: 1.2em;
+    font-family: cursive;
+    color: midnightblue;
+}
+.information{
+    background-color: #DCDCDC;
+}
