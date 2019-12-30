@@ -21,9 +21,10 @@ if(isset($_POST['username'])){
 		$row = $result->fetch_assoc();
 
 		if (password_verify($password, $row["password"])) {
+			echo "Welcome"+ $row["name"];
 			header("Location: ./homesi.php");
 		} else {
-			header("Location: ./login.php?wrong=wrong password");
+			header("Location: ./index.php?wrong=wrong password");
 		}
 
         exit();
@@ -31,7 +32,7 @@ if(isset($_POST['username'])){
 	
     else{
 		//echo " You Have Entered Incorrect Username";
-		header("Location: ./login.php?wrong=wrong username");
+		header("Location: ./index.php?wrong=wrong username");
         exit();
     }
         

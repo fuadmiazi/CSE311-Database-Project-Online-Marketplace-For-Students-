@@ -66,7 +66,7 @@
 
             if($result-> num_rows > 0){
                 while ($row = $result-> fetch_assoc()) {
-                    echo "<tr><td>".  $row["course_name"]. "</td><td>".  $row["instructor_name"] .  "</td><td>" . $row["fee"] . "</td></tr>";
+                    echo "<tr><td>".  $row["course_name"]. "</td><td>".  $row["instructor_name"] .  "</td><td>" . $row["fee"]. "</td></tr>";
                 }
                 echo "</table>";
             }
